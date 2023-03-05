@@ -5,33 +5,33 @@
 class Vulctl < Formula
   desc "Vulnerability management tool."
   homepage "https://github.com/mchmarny/vulctl"
-  version "0.0.10"
+  version "0.0.11"
   license "Apache-2.0"
 
   on_macos do
-    url "https://github.com/mchmarny/vulctl/releases/download/v0.0.10/vulctl_0.0.10_darwin_all"
-    sha256 "f69ceec2b64b236f407617718d7a2d1693a14994bfda02f5c8e2963b6718e9df"
+    url "https://github.com/mchmarny/vulctl/releases/download/v0.0.11/vulctl_0.0.11_darwin_all"
+    sha256 "85a46d960f196fe009dc908dcd500f39c894cf50ae26734d4d521e4a5f99130d"
 
     def install
-      bin.install "vulctl_0.0.10_darwin_all" => "vulctl"
+      bin.install "vulctl_0.0.11_darwin_all" => "vulctl"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/mchmarny/vulctl/releases/download/v0.0.10/vulctl_0.0.10_linux_amd64"
-      sha256 "83180cd3ebd8088ad08951af837129e031905366adcda2bb51252d386e740d21"
+      url "https://github.com/mchmarny/vulctl/releases/download/v0.0.11/vulctl_0.0.11_linux_amd64"
+      sha256 "33876d5831edf8ab2635765c8fa7d641ef6a4a7fc1ae17cfa53239cabf51429f"
 
       def install
-        bin.install "vulctl_0.0.10_linux_amd64" => "vulctl"
+        bin.install "vulctl_0.0.11_linux_amd64" => "vulctl"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mchmarny/vulctl/releases/download/v0.0.10/vulctl_0.0.10_linux_arm64"
-      sha256 "06b83df81f4089aa27b5dd7b2ac44136fe037089328fcdab531da66692daf8f1"
+      url "https://github.com/mchmarny/vulctl/releases/download/v0.0.11/vulctl_0.0.11_linux_arm64"
+      sha256 "ab430391e15bc8b3f9bc3874d6084194ef5e4f255910743a69cb70366cb1012b"
 
       def install
-        bin.install "vulctl_0.0.10_linux_arm64" => "vulctl"
+        bin.install "vulctl_0.0.11_linux_arm64" => "vulctl"
       end
     end
   end
