@@ -1,3 +1,3 @@
-# homebrew-disco
+# homebrew-vimp
 
-Install vulctl with Homebrew
+Install vimp with Homebrew
