@@ -5,33 +5,33 @@
 class Vimp < Formula
   desc "Vulnerability Import CLI"
   homepage "https://github.com/mchmarny/vimp"
-  version "0.5.10"
+  version "0.5.11"
   license "Apache-2.0"
 
   on_macos do
-    url "https://github.com/mchmarny/vimp/releases/download/v0.5.10/vimp_0.5.10_darwin_all"
-    sha256 "043b2411dbc96d509f3031a455638e4a0f70978eaf022f7613f9921b611702ea"
+    url "https://github.com/mchmarny/vimp/releases/download/v0.5.11/vimp_0.5.11_darwin_all"
+    sha256 "983fd7b800f153db775df482f57d8356d89af8fdd6c2819b16fa57c048887ac1"
 
     def install
-      bin.install "vimp_0.5.10_darwin_all" => "vimp"
+      bin.install "vimp_0.5.11_darwin_all" => "vimp"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mchmarny/vimp/releases/download/v0.5.10/vimp_0.5.10_linux_arm64"
-      sha256 "b3396464ec18f2bf24c9ff749a01c605a3f2c311a6a12325dbd713c6bc02c974"
+      url "https://github.com/mchmarny/vimp/releases/download/v0.5.11/vimp_0.5.11_linux_arm64"
+      sha256 "199c468fdca592fbeba45fb8faeb0647e2190091f359078b6f1e6d67af22434c"
 
       def install
-        bin.install "vimp_0.5.10_linux_arm64" => "vimp"
+        bin.install "vimp_0.5.11_linux_arm64" => "vimp"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/mchmarny/vimp/releases/download/v0.5.10/vimp_0.5.10_linux_amd64"
-      sha256 "d383d24a80a5dc57000d1da01fc75132eb49faf17ec71612ec7a8e1b50b9b52b"
+      url "https://github.com/mchmarny/vimp/releases/download/v0.5.11/vimp_0.5.11_linux_amd64"
+      sha256 "c1f7b56825cff4196a8d1e427f23510f71f6cd40ceacfe52328d72df254d04fe"
 
       def install
-        bin.install "vimp_0.5.10_linux_amd64" => "vimp"
+        bin.install "vimp_0.5.11_linux_amd64" => "vimp"
       end
     end
   end
