@@ -5,31 +5,41 @@
 class Vimp < Formula
   desc "Vulnerability Import CLI"
   homepage "https://github.com/mchmarny/vimp"
-  version "0.7.5"
+  version "0.7.7"
   license "Apache-2.0"
 
   on_macos do
-    url "https://github.com/mchmarny/vimp/releases/download/v0.7.5/vimp_0.7.5_darwin_all"
-    sha256 "7d98debcc3f4c1f84ab6438ee8a20b8c40f4db880d659bda522c24485d332009"
+    if Hardware::CPU.intel?
+      url "https://github.com/mchmarny/vimp/releases/download/v0.7.7/vimp_0.7.7_darwin_amd64"
+      sha256 "a930607c2c25fdcf80f0fcd0adc6f04b3a42c7948b870d0c0f751eb1353675b9"
 
-    def install
-      bin.install "vimp_0.7.5_darwin_all" => "vimp"
+      def install
+        bin.install "vimp_0.7.7_darwin_amd64" => "vimp"
+      end
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/mchmarny/vimp/releases/download/v0.7.7/vimp_0.7.7_darwin_arm64"
+      sha256 "ece0ddb73444fbd4f6404e6bfcdf77133f93c5a28dd58a2676a3504885f59828"
+
+      def install
+        bin.install "vimp_0.7.7_darwin_arm64" => "vimp"
+      end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mchmarny/vimp/releases/download/v0.7.5/vimp_0.7.5_linux_amd64"
-      sha256 "2a84e556e38a83f572f270f0d7ee3cb4e59d0a7adef9c44512bb58e1ee92db15"
+      url "https://github.com/mchmarny/vimp/releases/download/v0.7.7/vimp_0.7.7_linux_amd64"
+      sha256 "bcc1a36e55ad27f058831e1c86601a6938c799678ce689b6c61e20f7b3ab89c2"
       def install
-        bin.install "vimp_0.7.5_linux_amd64" => "vimp"
+        bin.install "vimp_0.7.7_linux_amd64" => "vimp"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mchmarny/vimp/releases/download/v0.7.5/vimp_0.7.5_linux_arm64"
-      sha256 "b507623246b92b33b5f4c5e59a431b34d547d4919e720fce0edd7b9bb0757df5"
+      url "https://github.com/mchmarny/vimp/releases/download/v0.7.7/vimp_0.7.7_linux_arm64"
+      sha256 "14e00e15f64503898f99f833a02244a54b6d89ac6774b28b7bbced70c64a3463"
       def install
-        bin.install "vimp_0.7.5_linux_arm64" => "vimp"
+        bin.install "vimp_0.7.7_linux_arm64" => "vimp"
       end
     end
   end
