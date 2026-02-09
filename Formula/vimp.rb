@@ -5,41 +5,41 @@
 class Vimp < Formula
   desc "Vulnerability Import CLI"
   homepage "https://github.com/mchmarny/vimp"
-  version "0.7.7"
+  version "0.8.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/mchmarny/vimp/releases/download/v0.7.7/vimp_0.7.7_darwin_amd64"
-      sha256 "a930607c2c25fdcf80f0fcd0adc6f04b3a42c7948b870d0c0f751eb1353675b9"
+      url "https://github.com/mchmarny/vimp/releases/download/v0.8.0/vimp_0.8.0_darwin_amd64"
+      sha256 "5c256f1fd48cda19f1c5ce32b44a7fa8cceb019bb689ec59f7ac10a3717be8da"
 
       def install
-        bin.install "vimp_0.7.7_darwin_amd64" => "vimp"
+        bin.install "vimp_0.8.0_darwin_amd64" => "vimp"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/mchmarny/vimp/releases/download/v0.7.7/vimp_0.7.7_darwin_arm64"
-      sha256 "ece0ddb73444fbd4f6404e6bfcdf77133f93c5a28dd58a2676a3504885f59828"
+      url "https://github.com/mchmarny/vimp/releases/download/v0.8.0/vimp_0.8.0_darwin_arm64"
+      sha256 "291b6980f7712bd568d462e2756b28fa716da439fbb1c69262d4fd4a1dcbee46"
 
       def install
-        bin.install "vimp_0.7.7_darwin_arm64" => "vimp"
+        bin.install "vimp_0.8.0_darwin_arm64" => "vimp"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mchmarny/vimp/releases/download/v0.7.7/vimp_0.7.7_linux_amd64"
-      sha256 "bcc1a36e55ad27f058831e1c86601a6938c799678ce689b6c61e20f7b3ab89c2"
+      url "https://github.com/mchmarny/vimp/releases/download/v0.8.0/vimp_0.8.0_linux_amd64"
+      sha256 "811f64e4f107d497327b955077c41609d2b2277cd96740857ec58dc138573688"
       def install
-        bin.install "vimp_0.7.7_linux_amd64" => "vimp"
+        bin.install "vimp_0.8.0_linux_amd64" => "vimp"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mchmarny/vimp/releases/download/v0.7.7/vimp_0.7.7_linux_arm64"
-      sha256 "14e00e15f64503898f99f833a02244a54b6d89ac6774b28b7bbced70c64a3463"
+      url "https://github.com/mchmarny/vimp/releases/download/v0.8.0/vimp_0.8.0_linux_arm64"
+      sha256 "fba5f28498da8bf2abf69c85c5c547442241e9aae890cfc8d6b1618afeb8f935"
       def install
-        bin.install "vimp_0.7.7_linux_arm64" => "vimp"
+        bin.install "vimp_0.8.0_linux_arm64" => "vimp"
       end
     end
   end
